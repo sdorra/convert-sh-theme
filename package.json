@@ -1,0 +1,27 @@
+{
+  "name": "shiki-css-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup src/index.ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@vitest/coverage-c8": "^0.27.1",
+    "prettier": "^2.8.3",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.27.1"
+  },
+  "dependencies": {
+    "shiki": "^0.12.1"
+  }
+}
