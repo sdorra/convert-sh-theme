@@ -1,8 +1,8 @@
 {
-  "name": "shiki-css-theme",
+  "name": "convert-sh-theme",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsup src/index.ts",
@@ -22,6 +22,7 @@
     "vitest": "^0.27.1"
   },
   "dependencies": {
+    "cmd-ts": "^0.11.0",
     "shiki": "^0.12.1"
   }
 }
