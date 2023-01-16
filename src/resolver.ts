@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch from "node-fetch-cjs";
 import fs from "fs/promises";
 import { Theme } from "./theme";
 

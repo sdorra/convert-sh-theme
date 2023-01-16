@@ -1,7 +1,7 @@
 {
   "name": "convert-sh-theme",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "Convert VSCode Themes to Shiki/Code Hike css variables",
   "main": "dist/index.js",
   "bin": {
     "convert-sh-theme": "dist/index.js"
@@ -17,9 +17,11 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "shiki", "VSCode", "CodeHike", "theme"
+  ],
+  "author": "Sebastian Sdorra <s.sdorra@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vitest/coverage-c8": "^0.27.1",
@@ -32,7 +34,7 @@
   },
   "dependencies": {
     "cmd-ts": "^0.11.0",
-    "node-fetch": "^3.3.0",
+    "node-fetch-cjs": "^3.2.0",
     "shiki": "^0.12.1"
   }
 }
