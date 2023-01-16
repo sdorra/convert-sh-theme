@@ -2,18 +2,18 @@ import fs from "fs/promises";
 import createCss from "./css";
 import createVars from "./vars";
 import createWriter from "./writer";
-import { createCodeHikeTheme, Theme } from "./theme";
-import { ExistingPath } from "cmd-ts/batteries/fs";
+import { createCodeHikeTheme } from "./theme";
 import { command, string, positional, option, flag, boolean } from "cmd-ts";
+import resolve from "./resolver";
 
 const app = command({
   name: "convert",
   description: "Convert vs code theme to shiki/ch css variables",
   args: {
     themePath: positional({
-      type: ExistingPath,
+      type: string,
       displayName: "theme",
-      description: "Path to vs code theme",
+      description: "Path or url to vs code theme",
     }),
     codeHike: flag({
       type: boolean,
@@ -29,8 +29,7 @@ const app = command({
     }),
   },
   handler: async (args) => {
-    const content = await fs.readFile(args.themePath, { encoding: "utf-8" });
-    const theme = JSON.parse(content) as Theme;
+    const theme = await resolve(args.themePath);
 
     const vars = createVars(theme, args.codeHike);
 

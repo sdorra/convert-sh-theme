@@ -1,8 +1,16 @@
 {
   "name": "convert-sh-theme",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
+  "bin": {
+    "convert-sh-theme": "dist/index.js"
+  },
+  "files": [
+    "dist/*",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsup src/index.ts",
@@ -24,6 +32,7 @@
   },
   "dependencies": {
     "cmd-ts": "^0.11.0",
+    "node-fetch": "^3.3.0",
     "shiki": "^0.12.1"
   }
 }
